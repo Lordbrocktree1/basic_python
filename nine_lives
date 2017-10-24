@@ -10,6 +10,10 @@ def update_clue(guess_letter, secret_word, clue, unknown_letters):
         index = index+1
     return unknown_letters
 
+def set_difficulty(num):
+    global lives
+    lives = 12 - ((num-1)*3)
+
 
 lives = 9
 words = ['pizza', 'fairy', 'teeth', 'shirt',
@@ -22,12 +26,7 @@ unknown_letters = len(secret_word)
 difficulty = input('Choose difficulty (type 1, 2, or 3):\n 1 Easy\n 2 Normal\n 3 Hard\n')
 difficulty = int(difficulty)
 
-if difficulty == 1:
-    lives = 12
-elif difficulty == 2:
-    lives = 9
-else:
-    lives = 6
+set_difficulty(difficulty)
 
 
 while lives > 0:
