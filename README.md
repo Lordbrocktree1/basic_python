@@ -13,3 +13,4 @@ These mini projects are adapted from the book "Coding Projects in Python" by DK.
 7. Mutant Rainbow
 8. Countdown Calendar
 9. Ask Expert
+9. Secret Message
