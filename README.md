@@ -8,3 +8,4 @@ These mini projects are adapted from the book "Coding Projects in Python" by DK.
 2. Nine Lives
 3. Password Picker
 4. Robot Builder
+5. Kaleido Spiral
