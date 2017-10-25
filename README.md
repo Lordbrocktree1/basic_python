@@ -11,3 +11,4 @@ These mini projects are adapted from the book "Coding Projects in Python" by DK.
 5. Kaleido Spiral
 6. Starry Night
 7. Mutant Rainbow
+8. Countdown Calendar
