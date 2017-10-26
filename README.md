@@ -15,3 +15,4 @@ These mini projects are adapted from the book "Coding Projects in Python" by DK.
 9. Ask Expert
 10. Secret Message
 11. Screen Pet
+12. Caterpillar
