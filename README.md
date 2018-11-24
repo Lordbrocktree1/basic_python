@@ -1,5 +1,5 @@
 # basic_python
-These are some pretty basic Python projects I have completed in my free time
+These are some Python projects I have completed in my free time including tkinter and turtle graphics
 
 Some of these mini projects are adapted from the book "Coding Projects in Python" by DK (1-12).
 
