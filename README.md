@@ -1,7 +1,7 @@
 # basic_python
 These are some pretty basic Python projects I have completed in my free time
 
-These mini projects are adapted from the book "Coding Projects in Python" by DK.
+Some of these mini projects are adapted from the book "Coding Projects in Python" by DK (1-12).
 
 **Table of Contents**
 1. Animal Quiz
@@ -16,3 +16,4 @@ These mini projects are adapted from the book "Coding Projects in Python" by DK.
 10. Secret Message
 11. Screen Pet
 12. Caterpillar
+13. Text Editor
