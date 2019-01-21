@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QToolTip
+from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox, QPushButton, QToolTip
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import pyqtSlot
@@ -33,6 +33,15 @@ class Example(QWidget):
         # self.setWindowIcon(QIcon('web.png'))
 
         self.show()
+
+    def closeEvent(self, event):
+        reply = QMessageBox.question(self, 'Message', "Are you sure you want to quit?",
+                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
