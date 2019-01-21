@@ -1,5 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox, QPushButton, QToolTip
+from PyQt5.QtWidgets import QApplication, QWidget, \
+    QMessageBox, QPushButton, QToolTip, QDesktopWidget
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import pyqtSlot
@@ -28,7 +29,8 @@ class Example(QWidget):
         qbtn.resize(qbtn.sizeHint())
         qbtn.move(50, 75)
 
-        self.setGeometry(300, 300, 300, 220)
+        self.resize(250, 150)
+        self.center()
         self.setWindowTitle('Icon')
         # self.setWindowIcon(QIcon('web.png'))
 
@@ -42,6 +44,12 @@ class Example(QWidget):
             event.accept()
         else:
             event.ignore()
+
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
