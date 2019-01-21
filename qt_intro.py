@@ -21,7 +21,12 @@ class Example(QWidget):
         btn = QPushButton('Button', self)
         btn.setToolTip('This is a <b>QPushButton</b> widget')
         btn.resize(btn.sizeHint())
-        btn.move(50,50)
+        btn.move(50, 50)
+
+        qbtn = QPushButton('Quit', self)
+        qbtn.clicked.connect(QApplication.instance().quit)
+        qbtn.resize(qbtn.sizeHint())
+        qbtn.move(50, 75)
 
         self.setGeometry(300, 300, 300, 220)
         self.setWindowTitle('Icon')
