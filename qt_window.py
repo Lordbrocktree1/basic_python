@@ -38,13 +38,19 @@ class Example(QMainWindow):
         viewStatAct = QAction('View statusbar', self, checkable=True)
         viewStatAct.setStatusTip('View statusbar')
         viewStatAct.setChecked(True)
-        # viewStatAct.triggered.connect(self.toggleMenu)
+        viewStatAct.triggered.connect(self.toggleMenu)
 
         viewMenu.addAction(viewStatAct)
 
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('Statusbar')
         self.show()
+
+    def toggleMenu(self, state):
+        if state:
+            self.statusbar.show()
+        else:
+            self.statusbar.hide()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
