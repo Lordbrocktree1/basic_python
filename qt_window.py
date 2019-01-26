@@ -18,9 +18,11 @@ class Example(QMainWindow):
         exitAct.setStatusTip('Exit application')
         exitAct.triggered.connect(qApp.quit)
 
-        self.statusBar()
+        self.statusbar = self.statusBar()
+        self.statusbar.showMessage('Ready')
 
         menubar = self.menuBar()
+
         fileMenu = menubar.addMenu(' &File')
         fileMenu.addAction(exitAct)
 
@@ -31,6 +33,14 @@ class Example(QMainWindow):
         newAct = QAction('New', self)
         fileMenu.addAction(newAct)
         fileMenu.addMenu(impMenu)
+
+        viewMenu = menubar.addMenu('View')
+        viewStatAct = QAction('View statusbar', self, checkable=True)
+        viewStatAct.setStatusTip('View statusbar')
+        viewStatAct.setChecked(True)
+        # viewStatAct.triggered.connect(self.toggleMenu)
+
+        viewMenu.addAction(viewStatAct)
 
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('Statusbar')
