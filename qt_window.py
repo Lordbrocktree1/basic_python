@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication, \
-    QAction, qApp
+    QAction, qApp, QMenu
 from PyQt5.QtGui import QIcon
 
 
@@ -23,6 +23,14 @@ class Example(QMainWindow):
         menubar = self.menuBar()
         fileMenu = menubar.addMenu(' &File')
         fileMenu.addAction(exitAct)
+
+        impMenu = QMenu('Import', self)
+        impAct = QAction('Import mail', self)
+        impMenu.addAction(impAct)
+
+        newAct = QAction('New', self)
+        fileMenu.addAction(newAct)
+        fileMenu.addMenu(impMenu)
 
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('Statusbar')
