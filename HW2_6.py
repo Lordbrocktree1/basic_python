@@ -37,3 +37,5 @@ q_wr_hnd = np.array([0.797, 0.000, 0.000, -0.605])# [w, (x,y,z)] form
 
 t_hnd_plm = np.array([0.000, 0.000, -0.160])
 q_hnd_plm = np.array([0.000, 0.707, 0.707, 0.000])# [w, (x,y,z)] form
+
+
