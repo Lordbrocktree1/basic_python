@@ -174,7 +174,11 @@ def q5():
 def q7():
     print("Q7:")
     print("A)")
-
+    # Matt showed me the math for splitting pi/8 into two velocities of direction
+    x = np.sin(np.pi/8) * .25
+    y = np.cos(np.pi/8) * .25
+    print("X vel:", x)
+    print("Y vel:", y)
 
     print("B)")
     r = .25 * 10
@@ -196,11 +200,11 @@ if __name__ == '__main__':
                     [   0.0, 1.0,   0.0],
                     [	0.0, 0.0,   1.0]])
     identityMat = np.array([[1.0, 0.0], [0.0, 1.0]])
-    # q1(identityMat)
-    # q2(identityMat)
-    # q3(identityMat)
-    # q4()
-    # q5()
+    q1(identityMat)
+    q2(identityMat)
+    q3(identityMat)
+    q4()
+    q5()
     # q6 on hw2_6.py
     q7()
 
